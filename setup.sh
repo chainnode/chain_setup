@@ -12,8 +12,8 @@ cd ~/chainpoint-node
 echo "NODE_TNT_ADDRESS=$1" > .env
 echo "CHAINPOINT_NODE_PUBLIC_URI=http://$ip" >> .env
 
-apt-get install ntp
-wget https://raw.githubusercontent.com/mauver/chainpoint_setup/master/ntp.conf
+apt-get -y install ntp
+wget https://raw.githubusercontent.com/chainnode/chain_setup/master/ntp.conf
 cp ntp.conf /etc/ntp.conf
 systemctl restart ntp.service
 
